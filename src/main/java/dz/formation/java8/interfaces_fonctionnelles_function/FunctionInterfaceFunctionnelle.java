@@ -8,7 +8,7 @@ package dz.formation.java8.interfaces_fonctionnelles_function;
  *
  * @author tchakal.ahmed
  */
-public class DefaultInterfaceFunctionnelle {
+public class FunctionInterfaceFunctionnelle {
 
     public static void main(String[] args) {
         //Interface Function<T,R>
