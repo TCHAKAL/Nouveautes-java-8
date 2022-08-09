@@ -40,7 +40,7 @@ public class LangageOptional {
 //    }
 
     private static Optional trouver(String str) {
-        if (str == "Hello") {
+        if ("Hello".equals(str)) {
             return Optional.of(1);
         } else {
             return Optional.empty();
