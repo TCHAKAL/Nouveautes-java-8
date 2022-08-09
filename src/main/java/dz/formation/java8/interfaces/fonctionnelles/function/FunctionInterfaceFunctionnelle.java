@@ -2,13 +2,13 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package dz.formation.java8.default_interfaces_fonctionnelles;
+package dz.formation.java8.interfaces.fonctionnelles.function;
 
 /**
  *
  * @author tchakal.ahmed
  */
-public class DefaultInterfaceFunctionnelle {
+public class FunctionInterfaceFunctionnelle {
 
     public static void main(String[] args) {
         //Interface Function<T,R>

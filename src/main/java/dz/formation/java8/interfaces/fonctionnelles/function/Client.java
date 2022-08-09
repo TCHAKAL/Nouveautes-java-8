@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package dz.formation.java8.interfaces_fonctionnelles_function;
+package dz.formation.java8.interfaces.fonctionnelles.function;
 
 import java.util.function.BiFunction;
 import java.util.function.BinaryOperator;
