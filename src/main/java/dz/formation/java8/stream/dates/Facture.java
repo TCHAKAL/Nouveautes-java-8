@@ -6,6 +6,9 @@ package dz.formation.java8.stream.dates;
 
 import java.time.LocalDate;
 import java.time.Period;
+import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeFormatterBuilder;
+import java.time.temporal.ChronoField;
 import java.time.temporal.ChronoUnit;
 import java.time.temporal.TemporalAdjusters;
 
@@ -56,14 +59,24 @@ public class Facture {
 
     @Override
     public String toString() {
-        return "Facture{" + "numero=" + numero + ", date=" + date + ", echeance=" + echeance + '}';
+        DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        DateTimeFormatterBuilder dateTimeFormatterBuilder = new DateTimeFormatterBuilder()
+                .appendLiteral(" Le : ")
+                .appendValue(ChronoField.DAY_OF_MONTH)
+                .appendLiteral(" du mois ")
+                .appendValue(ChronoField.MONTH_OF_YEAR)
+                .appendLiteral(" de l'an ")
+                .appendValue(ChronoField.YEAR);
+        return "Facture avec dateTimeFormatter {" + "numero=" + numero + ", date=" + date.format(dateTimeFormatter) + ", echeance=" + echeance + '}'+
+         "\nFacture avec dateTimeFormatterBuilder {" + "numero=" + numero + ", date=" + date.format(dateTimeFormatterBuilder.toFormatter()) + ", echeance=" + echeance + '}';
     }
 
     long restAvantechaance() {
-        return LocalDate.now().until(echeance,ChronoUnit.DAYS);
+        return LocalDate.now().until(echeance, ChronoUnit.DAYS);
     }
+
     long restAvantechaance2() {
-        return LocalDate.now().until(echeance.with(TemporalAdjusters.lastDayOfYear()),ChronoUnit.DAYS);
+        return LocalDate.now().until(echeance.with(TemporalAdjusters.lastDayOfYear()), ChronoUnit.DAYS);
     }
 
 }
