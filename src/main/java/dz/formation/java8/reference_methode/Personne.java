@@ -26,6 +26,9 @@ public class Personne {
         return p1.age-p2.age;
     }
 
+    public Personne() {
+    }
+
     @Override
     public String toString() {
         return "Personne{" + "nom=" + nom + ", age=" + age + '}';
